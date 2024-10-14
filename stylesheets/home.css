@@ -1,0 +1,408 @@
+/*Whole Page Responsiveness*/
+    @media screen and (max-width:768px) {
+        section {
+            padding: 15px 0px;
+        }
+        
+        section:nth-of-type(1){
+            padding-top:30px;
+        } 
+        
+        section:nth-of-type(6){
+            padding-bottom:30px;
+        }
+
+        h2{
+            font-size:24px;
+        }
+
+        .next-tag{ 
+            font-size:14px; 
+            font-weight: 900;
+            padding: 1px 5px;
+            border-radius: 4px;
+            border: 2px solid #9b9b9b; 
+            color: #9b9b9b;   
+    
+            width: fit-content;
+            height: fit-content; 
+        }
+    }
+
+/*Header Styling*/
+    header{
+        padding: 50px 0px;
+    }
+    .header-wrapper{
+        max-width: 1500px;
+        padding: 0px 30px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: row;
+        column-gap: 150px;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    #logo-main{
+        max-width: 360px;
+        width: 100%;
+        fill: var(--white);
+        position: relative;
+        left: -9px;
+    }
+
+    .header-text{
+        width: 80%;
+        max-width: 420px;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 24px;
+    }
+
+    #header-tag{
+        font-size: 27px; 
+        width: fit-content;
+        color: var(--cherry);
+        border: 3px solid var(--cherry);
+        padding: 6px 12px; 
+        border-radius: 6px;
+    }
+
+    #header-text{
+        color: var(--white);
+        font-size: 21px; 
+    }
+
+    .header-image{
+        width: 100%;
+        max-width: 360px;
+        border-radius: 5px; 
+    }
+
+    .header-image img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px; 
+    }
+
+    /*Header Responsiveness*/
+        @media screen and (max-width:609px){ 
+        /*Mobile Screens*/
+            .header-wrapper{
+                flex-direction: column; 
+                row-gap:36px;
+                width: fit-content;
+            }
+
+            .header-text{
+                width: 100%;
+                max-width: 360px;    
+            }
+
+            #logo-main{
+                max-width: 250px; 
+                left:-4px;
+            }
+
+            #header-tag{
+                font-size:21px;
+                border: 2px solid var(--cherry);
+            }
+
+            #header-text{
+                font-size:18px; 
+            }
+
+            header img{
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        @media screen and (min-width:610px) and (max-width:860px) {
+            .header-wrapper{
+                column-gap: 0;
+                justify-content: space-between;
+                align-items: center; 
+            }
+
+            .header-image{
+                max-width: 36vw; 
+            }
+
+            .header-text{
+                width: 100%;
+                max-width: 40vw;  
+            } 
+
+            #logo-main{
+                max-width: 270px; 
+                left:-4px;
+            }
+
+            #header-tag{
+                font-size:21px;
+            }
+
+            #header-text{
+                font-size:18px;  
+            }
+        }
+        
+
+
+/*Landing Page Section Styling*/
+
+    .section-wrapper{
+        max-width: 1320px;
+        padding: 0px 30px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .category-header{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 3px;
+        align-items: center;
+        column-gap: 12px; 
+        margin-bottom: 18px;
+    }
+
+    /*h2{
+        font-size:30px;
+        font-weight: 600;
+        margin-bottom:18px;
+        color: var(--black); 
+    }*/
+
+    .thumbnail-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .scroll-gif-thumbnail{
+        width: 100%;
+        max-width: 720px;
+        position: relative;
+    }
+
+    .lp-thumbnail{
+        max-width: 720px;
+        overflow: hidden;
+        border-radius: 5px;   
+    }
+
+    .lp-thumbnail img{
+        width: 100%;
+        height: 285px;
+        border-radius: 5px;
+    }
+
+    .gif-img{
+        object-fit: cover;
+    }
+
+    .lp-swiper{
+        overflow: hidden; 
+    }
+
+    @media screen and (min-width:768px) {
+        .next-tag{
+            display: none;
+        }
+    }
+
+/*Landing Thumbnail Overlay Styling*/
+
+    .lp-thumbnail-overlay-gif {
+        border-radius: 5px;
+        width: 100%;
+        max-width: 720px; 
+        height: 285px;
+        
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .1s ease;
+    }
+
+    .lp-thumbnail-overlay-gif img{
+        border-radius: 5px;
+        width: 100%;
+        height: 285px;
+    }
+
+    .lp-thumbnail:hover .lp-thumbnail-overlay-gif {
+        opacity: 1;
+    }
+
+/*Ebook Styling*/
+
+    .ebooks-wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .overlay-thumbnail{
+        width: 100%;
+        max-width: 720px;
+        height: fit-content;
+        border-radius: 5px;
+        position:relative;
+    }
+
+    .ebook-thumbnail{
+        max-width: 720px;
+        overflow:hidden;
+        border-radius:5px;
+    }
+
+    .ebook-thumbnail img{
+        width: 100%;
+        height: 285px;
+        border-radius: 5px;
+    }
+
+
+    .overlay-thumbnail img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+        /*Ebook Overlay Styling*/
+            .ebook-thumbnail-overlay {
+                border-radius: 5px;
+                width: 100%;
+                max-width: 720px; 
+                height: 285px;
+                
+
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .1s ease;
+            }
+
+            .ebook-thumbnail-overlay img{
+                border-radius: 5px;
+                width: 100%;
+                height: 285px;
+                object-fit: cover;
+            }
+            
+            .ebook-thumbnail:hover .ebook-thumbnail-overlay {
+                opacity: 1;
+            }
+
+
+/*KVs Ads Styling Overlay*/
+
+    .kv-ads-wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .kvsads-thumbnail{
+        width: 100%;
+        height: fit-content;
+        border-radius: 5px;
+    }
+
+
+    .kvsads-thumbnail img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    @media screen and (min-width:860px) {
+        .bw-thumbnail {
+            filter: saturate(1);
+        }
+
+        .bw-thumbnail:hover{
+            filter: saturate(150%); 
+            transition: .2s ease;
+        }
+    }
+
+/*KVs Social Media Styling*/
+
+    .kv-sm-wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .socialmedia-thumbnail{
+        width: 100%;
+        height: fit-content;
+        border-radius: 5px;
+    }
+
+
+    .socialmedia-thumbnail img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+/*Project Categories Responsiveness*/
+    @media screen and (max-width:420px) {
+        /*Landing Page and Email Marketing Thumbnails - I*/
+            .lp-thumbnail img, .lp-thumbnail-overlay-gif img{
+                height: 170px; 
+            } 
+
+        /*Ebook Thumbnails*/
+            .overlay-thumbnail img{
+                height: 180px;
+            }
+
+            .ebook-brand{
+                font-size:22px; 
+            }
+
+            .ebook-name{
+                font-size:16px;
+            }
+
+            .ebook-thumbnail-overlay{
+                background-size: 160px;
+                background-position: calc(100% + 12vw) 50%;
+            }
+        
+        
+    }
+
+    @media screen and (min-width:421px) and (max-width:620px) {
+        /*Landing Page and Email Marketing Thumbnails - II*/
+            .lp-thumbnail img, .lp-thumbnail-overlay-gif img{
+                height: 210px;  
+            } 
+
+        /*Ebook Thumbnails*/
+            .ebook-thumbnail-overlay{
+                background-size: 240px; 
+                background-position: calc(100% + 12vw) 50%;
+            }
+    }
+
+
+
+
